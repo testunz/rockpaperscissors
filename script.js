@@ -22,22 +22,51 @@ Now the best thing to do is to start the pseudocode. or this is the pseudocode? 
 
 */
 
-console.log("Welcome to Rock Paper Scissors game!");
 function getHumanChoice(){
     let humanChoice = prompt("rock, paper or scissors?");
     let humanChoiceInsensitive = humanChoice.toLowerCase();
     if (humanChoiceInsensitive == "rock" || humanChoiceInsensitive == "paper" || humanChoiceInsensitive == "scissors") {
-        console.log(humanChoiceInsensitive);
+        console.log("Human Choice :" + humanChoiceInsensitive);
+        return humanChoiceInsensitive;
     }
     else {
          console.log("non valido");
-         alert("Inserimento non valido, per favore riprovare")
-         getHumanChoice();
+         alert("Please only rock, paper or scissors")
+         return getHumanChoice();
     }
+    
 }
 function getComputerChoice(){
-    let computerChoice = Math.random();
-    console.log(computerChoice);
+    let computerRandomChoice = Math.random();
+    let computerChoice;
+    console.log(computerRandomChoice);
+    if (computerRandomChoice >= 0 && computerRandomChoice < 0.3) {
+        computerChoice = "rock";
+        console.log("Computer Choice :" + computerChoice);
+        return computerChoice;
+    }
+    else if (computerRandomChoice >= 0.3 && computerRandomChoice <0.7){
+        computerChoice = "paper"; 
+        console.log("Computer Choice :" + computerChoice);
+        return computerChoice;
+    }
+    else if (computerRandomChoice >= 0.7 && computerRandomChoice <1) {
+        computerChoice = "scissors";
+        console.log("Computer Choice :" + computerChoice);
+        return computerChoice;
+    
+    }
+    
 }
-getHumanChoice();
-getComputerChoice();s
+
+const humanChoiceValue = getHumanChoice();
+const computerChoiceValue = getComputerChoice();
+
+
+function playGame() {
+    console.log("Controllo human: " + humanChoiceValue);
+    console.log("Controllo pc: "+ computerChoiceValue);
+}
+
+
+playGame();
