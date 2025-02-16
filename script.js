@@ -59,77 +59,73 @@ function getComputerChoice(){
     
 }
 
-const humanChoiceValue = getHumanChoice();
-const computerChoiceValue = getComputerChoice();
 
+let humanScore = 0;
+let computerScore = 0; 
+function playRound() {
 
-function playGame() {
+let humanChoiceValue = getHumanChoice();
+let computerChoiceValue = getComputerChoice();
     console.log("Controllo human: " + humanChoiceValue);
     console.log("Controllo pc: "+ computerChoiceValue);
-    let humanScore;
-    let computerScore;
-    let round;
-    if (round <= 5){   
-    if (humanChoiceValue == "rock" && computerChoiceValue == "rock") {
-        return round += 1;
+         
+    if (humanChoiceValue === "rock" && computerChoiceValue === "rock") {
+        console.log("Punteggio Umano: " +humanScore + " | Punteggio Computer: " +computerScore);
+        console.log("PARI! Non vince nessuno!");
     }
-    if (humanChoiceValue == "rock" && computerChoiceValue == "paper") {
-        return {
-            round += 1;
-            computerScore += 1;
-         }
+    if (humanChoiceValue === "rock" && computerChoiceValue === "paper") {
+        computerScore += 1;
+        console.log("Punteggio Umano: " +humanScore + " | Punteggio Computer: " +computerScore);
+        console.log("Computer Wins this match!");
     }  
-    if (humanChoiceValue == "rock" && computerChoiceValue == "scissors") {
-    return {
-        round += 1;
+    if (humanChoiceValue === "rock" && computerChoiceValue === "scissors") {
         humanScore +=1;
+        console.log("Punteggio Umano: " +humanScore + " | Punteggio Computer: " +computerScore);
+
+        console.log("Human Wins this match!");
         }
+    if (humanChoiceValue === "paper" && computerChoiceValue === "rock") {
+        humanScore += 1;
+        console.log("Punteggio Umano: " +humanScore + " | Punteggio Computer: " +computerScore);
+
+        console.log("Human Wins this match!");
     }
-    if (humanChoiceValue == "paper" && computerChoiceValue == "rock") {
-        return {
-            round += 1;
-            humanScore += 1;
-        }
-    }
-    if (humanChoiceValue == "paper" && computerChoiceValue == "paper") {
-        return {
-            round += 1;
-        }
+    if (humanChoiceValue === "paper" && computerChoiceValue === "paper") {
+        console.log("Punteggio Umano: " +humanScore + " | Punteggio Computer: " +computerScore);
+
+        console.log("PARI! Non vince nessuno!");
     }  
     if (humanChoiceValue == "paper" && computerChoiceValue == "scissors") {
-    return {
-        round += 1;
         computerScore +=1;
-        }
+
+        console.log("Punteggio Umano: " +humanScore + " | Punteggio Computer: " +computerScore);
+
+        console.log("Computer Wins this match!");
     }
 
-    if (humanChoiceValue == "scissors" && computerChoiceValue == "rock") {
-        return {
-            round += 1;
-            computerScore += 1;
-        }
+    if (humanChoiceValue === "scissors" && computerChoiceValue === "rock") {
+        computerScore += 1;
+        console.log("Punteggio Umano: " +humanScore + " | Punteggio Computer: " +computerScore);
+
+        console.log("Computer Wins this match!");
     }
-    if (humanChoiceValue == "scissors" && computerChoiceValue == "paper") {
-        return {
-            round += 1;
-            humanScore += 1;
-        }
+    if (humanChoiceValue === "scissors" && computerChoiceValue == "paper") {
+        humanScore += 1;
+        console.log("Punteggio Umano: " +humanScore + " | Punteggio Computer: " +computerScore);
+
+        console.log("Human Wins this match!");
     }  
-    if (humanChoiceValue == "scissors" && computerChoiceValue == "scissors") {
-    return {
-        round += 1;
-        }
+    if (humanChoiceValue === "scissors" && computerChoiceValue === "scissors") {
+        console.log("Punteggio Umano: " +humanScore + " | Punteggio Computer: " +computerScore);
+
+        console.log("PARI! Non vince nessuno!");
+
     }
 }
-else {
-    return {
-        console.log("Round n. " + round);
-        console.log("Punteggio Umano: "+ humanScore);
-        console.log("Punteggio del PC: " + computerScore);
-    }
-}
-}
+
+        
+    
 
 
 
-playGame();
+playRound();
