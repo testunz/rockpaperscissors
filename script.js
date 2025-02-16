@@ -33,6 +33,7 @@ function getHumanChoice(){
     }
     else {
         return console.log("non valido");
+        getHumanChoice();
     }
     }
 
