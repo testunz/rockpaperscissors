@@ -28,12 +28,14 @@ Now the best thing to do is to start the pseudocode. or this is the pseudocode? 
 console.log("Welcome to Rock Paper Scissors game!");
 function getHumanChoice(){
     let humanChoice = prompt("rock, paper or scissors?");
-    if (humanChoice.toLowerCase == "rock" || humanChoice.toLowerCase == "paper" || humanChoice.toLowerCase == "scissors") {
-        console.log(humanChoice);
+    let humanChoiceInsensitive = humanChoice.toLowerCase();
+    if (humanChoiceInsensitive == "rock" || humanChoiceInsensitive == "paper" || humanChoiceInsensitive == "scissors") {
+        console.log(humanChoiceInsensitive);
     }
     else {
-        return console.log("non valido");
-        getHumanChoice();
+         console.log("non valido");
+         alert("Inserimento non valido, per favore riprovare")
+         getHumanChoice();
     }
     }
 
