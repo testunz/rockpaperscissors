@@ -1,7 +1,4 @@
-/* 
-Iniziamo a ballare la samba! 
-Dobbiamo strutturare l'algoritmo per generare il gioco forbice, carta, sasso, ma in inglese!
-
+/*  
 Here we are
 That's Rock Paper Scissors game coding for The Odin Project
 
@@ -37,6 +34,10 @@ function getHumanChoice(){
          alert("Inserimento non valido, per favore riprovare")
          getHumanChoice();
     }
-    }
-
+}
+function getComputerChoice(){
+    let computerChoice = Math.random();
+    console.log(computerChoice);
+}
 getHumanChoice();
+getComputerChoice();s
