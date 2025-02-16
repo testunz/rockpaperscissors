@@ -27,8 +27,8 @@ Now the best thing to do is to start the pseudocode. or this is the pseudocode? 
 
 console.log("Welcome to Rock Paper Scissors game!");
 function getHumanChoice(){
-    let humanChoice = prompt("Rock, Paper or scissors?");
-    if (humanChoice == "Rock" || humanChoice == "Paper" || humanChoice == "Scissors") {
+    let humanChoice = prompt("rock, paper or scissors?");
+    if (humanChoice.toLowerCase == "rock" || humanChoice.toLowerCase == "paper" || humanChoice.toLowerCase == "scissors") {
         console.log(humanChoice);
     }
     else {
