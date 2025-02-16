@@ -66,7 +66,70 @@ const computerChoiceValue = getComputerChoice();
 function playGame() {
     console.log("Controllo human: " + humanChoiceValue);
     console.log("Controllo pc: "+ computerChoiceValue);
+    let humanScore;
+    let computerScore;
+    let round;
+    if (round <= 5){   
+    if (humanChoiceValue == "rock" && computerChoiceValue == "rock") {
+        return round += 1;
+    }
+    if (humanChoiceValue == "rock" && computerChoiceValue == "paper") {
+        return {
+            round += 1;
+            computerScore += 1;
+         }
+    }  
+    if (humanChoiceValue == "rock" && computerChoiceValue == "scissors") {
+    return {
+        round += 1;
+        humanScore +=1;
+        }
+    }
+    if (humanChoiceValue == "paper" && computerChoiceValue == "rock") {
+        return {
+            round += 1;
+            humanScore += 1;
+        }
+    }
+    if (humanChoiceValue == "paper" && computerChoiceValue == "paper") {
+        return {
+            round += 1;
+        }
+    }  
+    if (humanChoiceValue == "paper" && computerChoiceValue == "scissors") {
+    return {
+        round += 1;
+        computerScore +=1;
+        }
+    }
+
+    if (humanChoiceValue == "scissors" && computerChoiceValue == "rock") {
+        return {
+            round += 1;
+            computerScore += 1;
+        }
+    }
+    if (humanChoiceValue == "scissors" && computerChoiceValue == "paper") {
+        return {
+            round += 1;
+            humanScore += 1;
+        }
+    }  
+    if (humanChoiceValue == "scissors" && computerChoiceValue == "scissors") {
+    return {
+        round += 1;
+        }
+    }
 }
+else {
+    return {
+        console.log("Round n. " + round);
+        console.log("Punteggio Umano: "+ humanScore);
+        console.log("Punteggio del PC: " + computerScore);
+    }
+}
+}
+
 
 
 playGame();
